@@ -33,10 +33,11 @@ function traceMethodCalls(obj) {
 }
 
 const config = {
-    steamId64: '76561198810968998',
-    accountName: 'rd2l1',
-    personaName: 'Inhouse Bot',
-    password: 'redditdota2league',
+    steamId64: '76561199021252568',
+    accountName: 'universityleague',
+    personaName: 'University League Bot',
+    password: 'vanderbiltesports',
+    steam_guard_code: '',
     status: CONSTANTS.BOT_OFFLINE,
     lobbyCount: 0,
 };

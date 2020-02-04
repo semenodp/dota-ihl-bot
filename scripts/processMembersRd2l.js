@@ -25,9 +25,9 @@ const logger = require('../lib/logger');
 const run = async (inputFile, outputFile, format = 'json') => {
     const discordMembers = JSON.parse(fs.readFileSync(inputFile));
     logger.info(`${inputFile} loaded ${discordMembers.length} entries.`);
-
-    const response = await got('https://rd2l.gg/players/json', { json: true });
-    const rd2lMembers = response.body;
+    const url = 'https://rd2l.gg/players/json'
+    const body = await got(url).json();
+    const rd2lMembers = body;
     logger.info(`rd2l.gg/players/json loaded ${rd2lMembers.length} entries.`);
 
     const rd2lMembersWithDiscord = rd2lMembers.filter(rd2lMember => rd2lMember.discord_name);

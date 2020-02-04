@@ -104,6 +104,7 @@ describe('Database', () => {
 
         it('return bad opendota match data', async () => {
             const data = await MatchTracker.getOpenDotaMatchDetails('aaaa4578aa557761aa');
+            console.log(data)
             assert.isNull(data);
         });
     });
